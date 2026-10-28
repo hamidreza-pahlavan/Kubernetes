@@ -46,7 +46,7 @@ This guide describes how to prepare an Ubuntu server for Kubernetes using a stat
 ### 2.1 Identify the network interface
 
 ```bash
-ip link
+vi /etc/netplan/00-installer-config.yaml
 ip addr
 ip route
 ```
