@@ -49,23 +49,6 @@ This guide describes how to prepare an Ubuntu server for Kubernetes using a stat
 vi /etc/netplan/00-installer-config.yaml
 ```
 
-```yaml
-network:
-  ethernets:
-    ens33:
-      dhcp4: no
-      addresses:
-      - 192.168.100.2/24
-      routes:
-        - to: 0.0.0.0/0
-          via: 192.168.100.1
-      nameservers:
-        addresses:
-        - 8.8.8.8
-        search: []
-  version: 2
-```
-
 Confirm the interface name. The following example uses `ens33`.
 
 ### 2.2 Back up the existing configuration
