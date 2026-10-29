@@ -132,6 +132,7 @@ Set the hostname to `master01`:
 
 ```bash
 sudo hostnamectl set-hostname master01
+echo "192.168.100.2 master01" >> /etc/hosts
 ```
 
 Start a new shell:
@@ -147,7 +148,7 @@ hostnamectl
 hostname
 ```
 
-## 5. Configure DNS
+## 5. Configure DNS SHEKAN
 
 DNS is configured through Netplan in Section 2.
 
@@ -156,6 +157,12 @@ Check the effective resolver configuration:
 ```bash
 resolvectl status
 cat /etc/resolv.conf
+vim /etc/resolv.conf
+```
+
+```text
+nameserver 185.51.200.2
+nameserver 178.22.122.100
 ```
 
 If your environment requires specific DNS servers, confirm that they are reachable and that the intended resolver configuration is active.
@@ -352,6 +359,19 @@ swapon --show
 ```
 
 Swap should be disabled for the standard Kubernetes configuration used in this guide.
+
+## 11. Active ip forwarding
+
+```bash
+cat <<EOF > /etc/sysctl.d/k8s.conf
+net.ipv4.ip_forward = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+EOF
+echo br_netfilter > /etc/modules-load.d/k8s.conf
+sysctl --system
+```
+
 
 ## 11. Configure Kubernetes Repository
 
