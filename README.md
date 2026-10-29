@@ -20,7 +20,7 @@ This guide describes how to prepare an Ubuntu server for Kubernetes using a stat
 13. [Install Kubernetes Components](#13-install-kubernetes-components)
 14. [Verify Installation](#14-verify-installation)
 15. [Prepare Kubernetes Images from the Internal Repository](#15-Prepare-Kubernetes-Images-from the-Internal-Repository)
-16. [Initialize the Kubernetes Control Plane](#16-Initialize-the-Kubernetes-Control-Plane)
+17. [Initialize the Kubernetes Control Plane](#16-Initialize-the-Kubernetes-Control-Plane)
 17.[Configure kubectl for the Control-Plane User](#17-Configure-kubectl-for-the-Control-Plane-User)
 18.[Join Worker Nodes to the Cluster](#18-Join-Worker-Nodes-to-the-Cluster)
 19.[Check Cluster and System Pods](#19-Check-Cluster-and-System-Pods)
