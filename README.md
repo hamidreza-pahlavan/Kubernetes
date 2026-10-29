@@ -374,21 +374,21 @@ sysctl --system
 ```
 
 
-## 11. Configure Kubernetes Repository
+## 12. Configure Kubernetes Repository
 
-### 11.1 Install required packages
+### 12.1 Install required packages
 
 ```bash
 sudo apt install -y ca-certificates curl gpg
 ```
 
-### 11.2 Create the keyring directory
+### 12.2 Create the keyring directory
 
 ```bash
 sudo install -m 0755 -d /etc/apt/keyrings
 ```
 
-### 11.3 Download the repository signing key
+### 12.3 Download the repository signing key
 
 Verify the key URL and fingerprint with your repository administrator before trusting it.
 
@@ -405,7 +405,7 @@ Set permissions:
 sudo chmod 0644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 ```
 
-### 11.4 Add the Kubernetes repository
+### 12.4 Add the Kubernetes repository
 
 Create the repository list:
 
@@ -427,7 +427,7 @@ sudo apt update
 
 If `apt update` reports a signature, certificate, or repository error, resolve it before installing Kubernetes packages.
 
-## 12. Install Kubernetes Components
+## 13. Install Kubernetes Components
 
 Install the required components:
 
@@ -461,7 +461,7 @@ sudo systemctl enable kubelet
 
 The kubelet may restart repeatedly until the node has been initialized or joined to a cluster. This can be expected before cluster initialization.
 
-## 13. Verify Installation
+## 14. Verify Installation
 
 Run the following checks:
 
