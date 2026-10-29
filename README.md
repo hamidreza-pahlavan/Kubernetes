@@ -16,9 +16,16 @@ This guide describes how to prepare an Ubuntu server for Kubernetes using a stat
 9. [Configure Containerd](#9-configure-containerd)
 10. [Disable Swap](#10-disable-swap)
 11. [Active IP Forwarding](#11-Active-IP-Forwarding)
-12. [Configure Kubernetes Repository](#11-configure-kubernetes-repository)
-13. [Install Kubernetes Components](#12-install-kubernetes-components)
-14. [Verify Installation](#13-verify-installation)
+12. [Configure Kubernetes Repository](#12-configure-kubernetes-repository)
+13. [Install Kubernetes Components](#13-install-kubernetes-components)
+14. [Verify Installation](#14-verify-installation)
+15. [Prepare Kubernetes Images from the Internal Repository](#15-Prepare-Kubernetes-Images-from the-Internal-Repository)
+16. [Initialize the Kubernetes Control Plane](#16-Initialize-the-Kubernetes-Control-Plane)
+17.[Configure kubectl for the Control-Plane User](#17-Configure-kubectl-for-the-Control-Plane-User)
+18.[Join Worker Nodes to the Cluster](#18-Join-Worker-Nodes-to-the-Cluster)
+19.[Check Cluster and System Pods](#19-Check-Cluster-and-System-Pods)
+20.[Install Calico as the Cluster Network Plugin](#20-Install-Calico-as-the-Cluster-Network-Plugin)
+21.[Final Verification Checklist](#21-Final-Verification-Checklist)
 
 ## 1. Prerequisites
 
