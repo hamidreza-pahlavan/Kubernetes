@@ -15,9 +15,10 @@ This guide describes how to prepare an Ubuntu server for Kubernetes using a stat
 8. [Install Containerd](#8-install-containerd)
 9. [Configure Containerd](#9-configure-containerd)
 10. [Disable Swap](#10-disable-swap)
-11. [Configure Kubernetes Repository](#11-configure-kubernetes-repository)
-12. [Install Kubernetes Components](#12-install-kubernetes-components)
-13. [Verify Installation](#13-verify-installation)
+11. [Active IP Forwarding](#11-Active-IP-Forwarding)
+12. [Configure Kubernetes Repository](#11-configure-kubernetes-repository)
+13. [Install Kubernetes Components](#12-install-kubernetes-components)
+14. [Verify Installation](#13-verify-installation)
 
 ## 1. Prerequisites
 
