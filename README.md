@@ -741,6 +741,24 @@ Under the appropriate `spec` section, configure the registry as required by the 
 ```yaml
 registry: repo.serverops.ir
 ```
+Result
+```toml
+apiVersion: operator.tigera.io/v1
+kind: Installation
+metadata:
+  name: default
+spec:
+  registry: repo.serverops.ir
+  # Configures Calico networking.
+  calicoNetwork:
+    ipPools:
+      - name: default-ipv4-ippool
+        blockSize: 26
+        cidr: 10.10.0.0/16
+        encapsulation: VXLANCrossSubnet
+        natOutgoing: Enabled
+        nodeSelector: all()
+```
 
 Check the manifest structure and the documentation for the selected Calico release before adding this field; do not add it at an arbitrary YAML level.
 
